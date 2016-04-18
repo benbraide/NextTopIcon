@@ -30,9 +30,9 @@
 <script src="/node_modules/angular2/bundles/router.dev.js"></script>
 <script src="/node_modules/angular2/bundles/http.dev.js"></script>
 
-<script src="/js/jquery-2.2.3.min.js"></script>
-<script src="/js/tether.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
+<script src="/app/js/jquery-2.2.3.min.js"></script>
+<script src="/app/js/tether.min.js"></script>
+<script src="/app/js/bootstrap.min.js"></script>
 
 <!-- 2. Configure SystemJS -->
 <script>
