@@ -1,13 +1,11 @@
 /vendor
 /node_modules
+/app/node_modules
+/app/typings
 /public/storage
-.idea/workspace.xml
 Homestead.yaml
 Homestead.json
 .env
-
 .idea/php.xml
 .idea/ail2.iml
-.idea/ail2.iml
-.idea/ail2.iml
-.idea/ail2.iml
+.idea/workspace.xml
