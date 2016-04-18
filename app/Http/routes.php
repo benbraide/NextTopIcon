@@ -17,43 +17,43 @@ Route::group(['middleware' => 'web'], function () {
      */
     Route::group(["prefix" => "tmpl"], function () {
         Route::get("/pages/master", function () {
-            return view("tmpl.page.master");
+            return view("tmpl.pages.master");
         });
 
         Route::get("/pages/home", function () {
-            return view("tmpl.page.home");
+            return view("tmpl.pages.home");
         });
 
         Route::get("/pages/about", function () {
-            return view("tmpl.page.about");
+            return view("tmpl.pages.about");
         });
 
         Route::get("/pages/signup", function () {
-            return view("tmpl.page.signup");
+            return view("tmpl.pages.signup");
         });
 
         Route::get("/pages/signin", function () {
-            return view("tmpl.page.signin");
+            return view("tmpl.pages.signin");
         });
 
         Route::get("/pages/password/form", function () {
-            return view("tmpl.page.password.form");
+            return view("tmpl.pages.password.form");
         });
 
         Route::get("/pages/password/reset", function () {
-            return view("tmpl.page.password.reset");
+            return view("tmpl.pages.password.reset");
         });
 
         Route::get("/nav/static", function () {
-            return view("tmpl.nav.static");
+            return view("tmpl.navbar.static");
         });
 
         Route::get("/nav/dynamic", function () {
-            return view("tmpl.nav.dynamic");
+            return view("tmpl.navbar.dynamic");
         });
 
         Route::get("/pages/profile", function () {
-            return view("tmpl.page.profile");
+            return view("tmpl.pages.profile");
         });
 
         Route::get("/profile/details", function () {
