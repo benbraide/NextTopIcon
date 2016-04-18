@@ -6,6 +6,4 @@
 Homestead.yaml
 Homestead.json
 .env
-.idea/php.xml
-.idea/ail2.iml
-.idea/workspace.xml
+/.idea/*
