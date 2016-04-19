@@ -1,7 +1,7 @@
 /**
  * Created by benbraide on 4/18/2016.
  */
-System.register(['angular2/core', 'angular2/router', 'angular2/http', 'angular2/platform/browser', "../partials/navbar.component", "../partials/intro.component", "./home.component", "./signup.component"], function(exports_1) {
+System.register(['angular2/core', 'angular2/router', 'angular2/http', 'angular2/platform/browser', "../partials/navbar.component", "../partials/intro.component", "./home.component", "./signup.component", "./signin.component"], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") return Reflect.decorate(decorators, target, key, desc);
         switch (arguments.length) {
@@ -13,7 +13,7 @@ System.register(['angular2/core', 'angular2/router', 'angular2/http', 'angular2/
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, http_1, browser_1, navbar_component_1, intro_component_1, home_component_1, signup_component_1;
+    var core_1, router_1, http_1, browser_1, navbar_component_1, intro_component_1, home_component_1, signup_component_1, signin_component_1;
     var MasterComponent;
     return {
         setters:[
@@ -40,6 +40,9 @@ System.register(['angular2/core', 'angular2/router', 'angular2/http', 'angular2/
             },
             function (signup_component_1_1) {
                 signup_component_1 = signup_component_1_1;
+            },
+            function (signin_component_1_1) {
+                signin_component_1 = signin_component_1_1;
             }],
         execute: function() {
             MasterComponent = (function () {
@@ -56,7 +59,7 @@ System.register(['angular2/core', 'angular2/router', 'angular2/http', 'angular2/
                         selector: 'nti',
                         templateUrl: '/tmpl/pages/master',
                         styleUrls: ["app/css/master.css"],
-                        directives: [router_1.RouterOutlet, navbar_component_1.NavbarComponent, intro_component_1.IntroComponent, home_component_1.HomeComponent, signup_component_1.SignupComponent],
+                        directives: [router_1.RouterOutlet, navbar_component_1.NavbarComponent, intro_component_1.IntroComponent, home_component_1.HomeComponent, signup_component_1.SignupComponent, signin_component_1.SigninComponent],
                         providers: [router_1.ROUTER_PROVIDERS, http_1.HTTP_PROVIDERS, browser_1.Title]
                     }),
                     router_1.RouteConfig([
@@ -70,6 +73,11 @@ System.register(['angular2/core', 'angular2/router', 'angular2/http', 'angular2/
                             path: '/signup',
                             name: 'Signup',
                             component: signup_component_1.SignupComponent
+                        },
+                        {
+                            path: '/signin',
+                            name: 'Signin',
+                            component: signin_component_1.SigninComponent
                         }
                     ]), 
                     __metadata('design:paramtypes', [router_1.Router, core_1.ElementRef])

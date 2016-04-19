@@ -27,7 +27,7 @@
 
     <div class="row">
         <div class="nti-single">
-            <a href="signin">Sign in</a>&nbsp;if you already have an account
+            <a [routerLink]="['Signin']">Sign in</a>&nbsp;if you already have an account
         </div>
     </div>
 

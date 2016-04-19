@@ -641,7 +641,7 @@ input[type="checkbox"].disabled {
       width: 25%;
       text-align: right; } }
 
-.nti-input, .nti-check {
+.nti-input {
   position: relative;
   float: left;
   min-height: 1px;
@@ -649,10 +649,10 @@ input[type="checkbox"].disabled {
   padding-right: 0.9375rem;
   width: 100%; }
   @media (min-width: 992px) {
-    .nti-input, .nti-check {
+    .nti-input {
       width: 66.66667%; } }
 
-.nti-single, .nti-submit {
+.nti-single, .nti-submit, .nti-checkbox {
   position: relative;
   float: left;
   min-height: 1px;
@@ -660,11 +660,11 @@ input[type="checkbox"].disabled {
   padding-right: 0.9375rem;
   width: 100%; }
   @media (min-width: 992px) {
-    .nti-single, .nti-submit {
+    .nti-single, .nti-submit, .nti-checkbox {
       width: 50%;
       margin-left: 25%; } }
 
-.nti-check {
-  margin-bottom: -15px; }
+.nti-checkbox {
+  margin-bottom: -12px; }
 
 /*# sourceMappingURL=form.css.map */

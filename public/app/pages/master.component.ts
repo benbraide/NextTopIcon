@@ -13,12 +13,13 @@ import {IntroComponent} from "../partials/intro.component";
 
 import {HomeComponent} from "./home.component";
 import {SignupComponent} from "./signup.component";
+import {SigninComponent} from "./signin.component";
 
 @Component({
     selector: 'nti',
     templateUrl: '/tmpl/pages/master',
     styleUrls: ["app/css/master.css"],
-    directives: [RouterOutlet, NavbarComponent, IntroComponent, HomeComponent, SignupComponent],
+    directives: [RouterOutlet, NavbarComponent, IntroComponent, HomeComponent, SignupComponent, SigninComponent],
     providers: [ROUTER_PROVIDERS, HTTP_PROVIDERS, Title]
 })
 @RouteConfig([
@@ -32,6 +33,11 @@ import {SignupComponent} from "./signup.component";
         path: '/signup',
         name: 'Signup',
         component: SignupComponent
+    },
+    {
+        path: '/signin',
+        name: 'Signin',
+        component: SigninComponent
     }
 ])
 export class MasterComponent implements OnInit {

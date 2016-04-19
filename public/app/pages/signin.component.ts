@@ -7,15 +7,15 @@ import {Title} from 'angular2/platform/browser';
 import {RouterLink} from 'angular2/router';
 
 @Component({
-    selector: "nti-signup",
-    templateUrl: "/tmpl/pages/signup",
+    selector: "nti-signin",
+    templateUrl: "/tmpl/pages/signin",
     styleUrls: ["app/css/form.css"],
     directives: [RouterLink]
 })
-export class SignupComponent implements OnInit {
+export class SigninComponent implements OnInit {
     constructor(private _title: Title){}
 
     ngOnInit() {
-        this._title.setTitle("Sign Up - AIL");
+        this._title.setTitle("Sign In - AIL");
     }
 }
