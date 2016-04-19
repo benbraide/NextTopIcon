@@ -34,6 +34,7 @@ System.register(["angular2/core", 'angular2/router', "../components/icon.compone
                     core_1.Component({
                         selector: "nti-navbar",
                         templateUrl: "/tmpl/partials/navbar",
+                        styleUrls: ["app/css/navbar.css"],
                         directives: [router_1.RouterLink, icon_component_1.IconComponent]
                     }), 
                     __metadata('design:paramtypes', [])

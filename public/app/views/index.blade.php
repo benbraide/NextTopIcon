@@ -3,11 +3,13 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="<?= csrf_token() ?>" />
 
     <title></title>
 
     <base href="/">
+
+    <link rel="stylesheet" type="text/css" href="/app/css/reboot.css">
+    <link rel="stylesheet" type="text/css" href="/app/css/font-awesome.css">
 </head>
 <body>
 
@@ -18,8 +20,6 @@
         csrf: "{!! csrf_token() !!}",
         loggedInUserId: {!! $loggedInUserId ?: "null" !!}
     }
-
-    console.log(NtiGlobalObjects);
 </script>
 
 <!-- 1. Load libraries -->

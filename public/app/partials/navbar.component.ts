@@ -10,6 +10,7 @@ import {IconComponent} from "../components/icon.component";
 @Component({
     selector: "nti-navbar",
     templateUrl: "/tmpl/partials/navbar",
+    styleUrls: ["app/css/navbar.css"],
     directives: [RouterLink, IconComponent]
 })
 export class NavbarComponent{}
