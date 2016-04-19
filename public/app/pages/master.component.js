@@ -1,7 +1,7 @@
 /**
  * Created by benbraide on 4/18/2016.
  */
-System.register(['angular2/core', 'angular2/router', 'angular2/http', 'angular2/platform/browser', "../partials/navbar.component", "../partials/intro.component", "./home.component"], function(exports_1) {
+System.register(['angular2/core', 'angular2/router', 'angular2/http', 'angular2/platform/browser', "../partials/navbar.component", "../partials/intro.component", "./home.component", "./signup.component"], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") return Reflect.decorate(decorators, target, key, desc);
         switch (arguments.length) {
@@ -13,7 +13,7 @@ System.register(['angular2/core', 'angular2/router', 'angular2/http', 'angular2/
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, http_1, browser_1, navbar_component_1, intro_component_1, home_component_1;
+    var core_1, router_1, http_1, browser_1, navbar_component_1, intro_component_1, home_component_1, signup_component_1;
     var MasterComponent;
     return {
         setters:[
@@ -37,6 +37,9 @@ System.register(['angular2/core', 'angular2/router', 'angular2/http', 'angular2/
             },
             function (home_component_1_1) {
                 home_component_1 = home_component_1_1;
+            },
+            function (signup_component_1_1) {
+                signup_component_1 = signup_component_1_1;
             }],
         execute: function() {
             MasterComponent = (function () {
@@ -45,11 +48,15 @@ System.register(['angular2/core', 'angular2/router', 'angular2/http', 'angular2/
                     this._element = _element;
                 }
                 MasterComponent.prototype.ngOnInit = function () { };
+                MasterComponent.prototype.showIntro = function () {
+                    return (this._router.isRouteActive(this._router.generate(['/Home'])));
+                };
                 MasterComponent = __decorate([
                     core_1.Component({
                         selector: 'nti',
                         templateUrl: '/tmpl/pages/master',
-                        directives: [router_1.RouterOutlet, navbar_component_1.NavbarComponent, intro_component_1.IntroComponent, home_component_1.HomeComponent],
+                        styleUrls: ["app/css/master.css"],
+                        directives: [router_1.RouterOutlet, navbar_component_1.NavbarComponent, intro_component_1.IntroComponent, home_component_1.HomeComponent, signup_component_1.SignupComponent],
                         providers: [router_1.ROUTER_PROVIDERS, http_1.HTTP_PROVIDERS, browser_1.Title]
                     }),
                     router_1.RouteConfig([
@@ -58,6 +65,11 @@ System.register(['angular2/core', 'angular2/router', 'angular2/http', 'angular2/
                             name: 'Home',
                             component: home_component_1.HomeComponent,
                             useAsDefault: true
+                        },
+                        {
+                            path: '/signup',
+                            name: 'Signup',
+                            component: signup_component_1.SignupComponent
                         }
                     ]), 
                     __metadata('design:paramtypes', [router_1.Router, core_1.ElementRef])

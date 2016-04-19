@@ -1,0 +1,78 @@
+@import "bootstrap/variables";
+
+@import "bootstrap/mixins";
+@import "bootstrap/buttons";
+@import "bootstrap/forms";
+
+@import "variables";
+
+.row{
+  @include make-row();
+}
+
+.nti-form-heading{
+  margin-top: 20px;
+
+  @include media-breakpoint-up($nti-desktop-device){
+    margin-top: 70px;
+  }
+}
+
+.nti-form{
+  @include make-container();
+  @include make-container-max-widths();
+
+  @include media-breakpoint-up($nti-desktop-device){
+    margin-top: 30px;
+  }
+}
+
+.nti-label{
+  @include make-col();
+  @include make-col-span(12);
+
+  @include media-breakpoint-up($nti-desktop-device){
+    @include make-col-span(3);
+
+    text-align: right;
+  }
+
+  @extend .form-control-label;
+
+  color: #707070;
+  display: block;
+}
+
+.nti-input{
+  @include make-col();
+  @include make-col-span(12);
+
+  @include media-breakpoint-up($nti-desktop-device){
+    @include make-col-span(8);
+  }
+}
+
+.nti-single{
+  @include make-col();
+  @include make-col-span(12);
+
+  @include media-breakpoint-up($nti-desktop-device){
+    @include make-col-span(6);
+    @include make-col-offset(3);
+  }
+}
+
+.nti-submit{
+  @extend .nti-single;
+}
+
+.nti-plain-btn{
+  @extend .btn;
+  @extend .btn-secondary;
+}
+
+.nti-check{
+  @extend .nti-input;
+
+  margin-bottom: -15px;
+}

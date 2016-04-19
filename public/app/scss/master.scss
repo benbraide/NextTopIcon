@@ -1,0 +1,43 @@
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+@import "variables";
+
+@mixin nti-tablet-media{
+  @include media-breakpoint-between(md, md){
+    @content;
+  }
+}
+
+.container{
+  @include make-container();
+  @include make-container-max-widths();
+}
+
+.nti-main{
+  @include make-col();
+  @include make-col-span(12);
+
+  @include media-breakpoint-up($nti-desktop-device){
+    @include make-col-span($nti-main-width);
+  }
+
+  @include nti-tablet-media{
+    @include make-col-span($nti-tablet-main-width);
+  }
+
+  overflow: visible;
+}
+
+.nti-side{
+  @include make-col();
+  @include make-col-span(0);
+
+  @include media-breakpoint-up($nti-desktop-device){
+    @include make-col-span($nti-side-width);
+  }
+
+  @include nti-tablet-media{
+    @include make-col-span($nti-tablet-side-width);
+  }
+}

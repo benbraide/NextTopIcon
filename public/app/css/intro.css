@@ -190,20 +190,12 @@
 
   .carousel-indicators {
     bottom: 20px; } }
-.nti-row {
-  margin-left: -0.9375rem;
-  margin-right: -0.9375rem; }
-  .nti-row::after {
-    content: "";
-    display: table;
-    clear: both; }
-
 .nti-intro {
   margin-left: auto;
   margin-right: auto;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
-  background-color: #333333;
+  background-color: #666666;
   margin-bottom: 10px;
   padding: 0; }
   .nti-intro::after {

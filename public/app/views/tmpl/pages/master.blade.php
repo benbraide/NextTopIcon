@@ -7,7 +7,7 @@
     <nti-navbar></nti-navbar>
 
     @unless(Auth::check())
-        <nti-intro></nti-intro>
+        <nti-intro *ngIf="showIntro()"></nti-intro>
     @endunless
 
     <main class="container">

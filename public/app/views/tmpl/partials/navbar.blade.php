@@ -18,7 +18,7 @@
                         <nti-icon value="sign-in"></nti-icon>
                         <span>Sign In</span>
                     </a>
-                    <a href="#" class="nti-link-pill">
+                    <a [routerLink]="['Signup']" class="nti-link-pill">
                         <nti-icon value="user-plus"></nti-icon>
                         <span>Sign Up</span>
                     </a>

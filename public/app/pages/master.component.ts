@@ -12,11 +12,13 @@ import {NavbarComponent} from "../partials/navbar.component";
 import {IntroComponent} from "../partials/intro.component";
 
 import {HomeComponent} from "./home.component";
+import {SignupComponent} from "./signup.component";
 
 @Component({
     selector: 'nti',
     templateUrl: '/tmpl/pages/master',
-    directives: [RouterOutlet, NavbarComponent, IntroComponent, HomeComponent],
+    styleUrls: ["app/css/master.css"],
+    directives: [RouterOutlet, NavbarComponent, IntroComponent, HomeComponent, SignupComponent],
     providers: [ROUTER_PROVIDERS, HTTP_PROVIDERS, Title]
 })
 @RouteConfig([
@@ -25,10 +27,19 @@ import {HomeComponent} from "./home.component";
         name: 'Home',
         component: HomeComponent,
         useAsDefault: true
+    },
+    {
+        path: '/signup',
+        name: 'Signup',
+        component: SignupComponent
     }
 ])
 export class MasterComponent implements OnInit {
     constructor(private _router: Router, private _element: ElementRef){}
 
     ngOnInit() {}
+
+    showIntro() {
+        return (this._router.isRouteActive(this._router.generate(['/Home'])));
+    }
 }

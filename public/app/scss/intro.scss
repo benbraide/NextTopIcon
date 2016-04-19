@@ -4,24 +4,16 @@
 @import "bootstrap/images";
 @import "bootstrap/carousel";
 
-$ail-small-phone-device:    xm;
-$ail-phone-device:          sm;
-$ail-mobile-device:         md;
-$ail-desktop-device:        lg;
-$ail-large-desktop-device:  xl;
-
-.nti-row{
-  @include make-row();
-}
+@import "variables";
 
 .nti-intro{
   @include make-container();
 
-  background-color: #333333;
+  background-color: #666666;
   margin-bottom: 10px;
   padding: 0;
 
-  @include media-breakpoint-up($ail-desktop-device){
+  @include media-breakpoint-up($nti-desktop-device){
     height: 600px;
   }
 }
@@ -31,7 +23,7 @@ $ail-large-desktop-device:  xl;
 
   height: 400px;
 
-  @include media-breakpoint-up($ail-desktop-device){
+  @include media-breakpoint-up($nti-desktop-device){
     @include make-container-max-widths();
 
     height: 600px;
