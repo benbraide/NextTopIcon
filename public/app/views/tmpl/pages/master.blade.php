@@ -6,9 +6,9 @@
 
     <nti-navbar></nti-navbar>
 
-    @if(!Auth::check())
+    @unless(Auth::check())
         <nti-intro></nti-intro>
-    @endif
+    @endunless
 
     <main class="container">
         <div class="nti-main" id="nti-main">

@@ -1,0 +1,60 @@
+@import "bootstrap/variables";
+
+@import "bootstrap/mixins";
+@import "bootstrap/images";
+@import "bootstrap/carousel";
+
+$ail-small-phone-device:    xm;
+$ail-phone-device:          sm;
+$ail-mobile-device:         md;
+$ail-desktop-device:        lg;
+$ail-large-desktop-device:  xl;
+
+.nti-row{
+  @include make-row();
+}
+
+.nti-intro{
+  @include make-container();
+
+  background-color: #333333;
+  margin-bottom: 10px;
+  padding: 0;
+
+  @include media-breakpoint-up($ail-desktop-device){
+    height: 600px;
+  }
+}
+
+.nti-inner{
+  @include make-container();
+
+  height: 400px;
+
+  @include media-breakpoint-up($ail-desktop-device){
+    @include make-container-max-widths();
+
+    height: 600px;
+  }
+}
+
+.carousel {
+  height: 100%;
+  padding: 0.9375rem;
+}
+
+.carousel-inner, img {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item{
+  @include border-radius(5px);
+
+  overflow: hidden;
+  height: 100%;
+}
+
+.sr-only{
+  @include sr-only();
+}

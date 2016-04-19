@@ -4,6 +4,12 @@
 @import "bootstrap/buttons";
 @import "bootstrap/forms";
 
+$ail-small-phone-device:    xm;
+$ail-phone-device:          sm;
+$ail-mobile-device:         md;
+$ail-desktop-device:        lg;
+$ail-large-desktop-device:  xl;
+
 .nti-container{
   @include make-container();
   @include make-container-max-widths();
