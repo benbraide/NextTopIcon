@@ -3,19 +3,16 @@
  */
 
 import {Component, OnInit} from "angular2/core";
-import {Title} from 'angular2/platform/browser';
 import {RouterLink} from 'angular2/router';
+
+import {TitleComponent} from "../components/title.component";
 
 @Component({
     selector: "nti-signin",
     templateUrl: "/tmpl/pages/signin",
     styleUrls: ["app/css/form.css"],
-    directives: [RouterLink]
+    directives: [RouterLink, TitleComponent]
 })
 export class SigninComponent implements OnInit {
-    constructor(private _title: Title){}
-
-    ngOnInit() {
-        this._title.setTitle("Sign In - AIL");
-    }
+    ngOnInit() {}
 }

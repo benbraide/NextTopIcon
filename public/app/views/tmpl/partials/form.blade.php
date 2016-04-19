@@ -1,3 +1,5 @@
+<nti-title value="@yield('title')"></nti-title>
+
 <h2 class="nti-form-heading">@yield("form-caption")</h2>
 <hr />
 

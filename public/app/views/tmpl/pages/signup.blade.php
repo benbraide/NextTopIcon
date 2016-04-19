@@ -1,5 +1,6 @@
 <?php $form_btn_text = "Sign up"; $form_url = "api/users" ?>
 
+@section("title", "Sign Up")
 @section("form-caption", "Sign up")
 
 @section("form-extra")

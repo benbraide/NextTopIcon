@@ -1,5 +1,6 @@
 <?php $form_btn_text = "Sign in"; $form_url = "enter" ?>
 
+@section("title", "Sign In")
 @section("form-caption", "Sign in")
 
 @section("form-extra")
