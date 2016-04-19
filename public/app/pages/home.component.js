@@ -37,7 +37,7 @@ System.register(['angular2/core', 'angular2/platform/browser', "../partials/navb
                 HomeComponent = __decorate([
                     core_1.Component({
                         selector: "nti-home",
-                        templateUrl: "tmpl/pages/home",
+                        templateUrl: "/tmpl/pages/home",
                         styleUrls: [],
                         directives: [navbar_component_1.NavbarComponent]
                     }), 

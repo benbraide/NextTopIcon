@@ -7,15 +7,20 @@
 
     <title></title>
 
-    <link rel="stylesheet" type="text/css" href="/css/tether/tether.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/jquery.webui-popover.min.css">
-    <link rel="stylesheet" type="text/css" href="/app/css/nav.css">
-
     <base href="/">
 </head>
 <body>
 
 <nti>Loading...</nti>
+
+<script>
+    NtiGlobalObjects = {
+        csrf: "{!! csrf_token() !!}",
+        loggedInUserId: {!! $loggedInUserId ?: "null" !!}
+    }
+
+    console.log(NtiGlobalObjects);
+</script>
 
 <!-- 1. Load libraries -->
 <!-- IE required polyfills, in this exact order -->

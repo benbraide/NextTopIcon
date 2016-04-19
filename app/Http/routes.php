@@ -44,12 +44,16 @@ Route::group(['middleware' => 'web'], function () {
             return view("tmpl.pages.password.reset");
         });
 
-        Route::get("/nav/static", function () {
-            return view("tmpl.navbar.static");
+        Route::get("/partials/navbar", function () {
+            return view("tmpl.partials.navbar");
         });
 
-        Route::get("/nav/dynamic", function () {
-            return view("tmpl.navbar.dynamic");
+        Route::get("/partials/intro", function () {
+            return view("tmpl.partials.intro");
+        });
+
+        Route::get("/partials/footer", function () {
+            return view("tmpl.partials.footer");
         });
 
         Route::get("/pages/profile", function () {
@@ -108,7 +112,5 @@ Route::group(['middleware' => 'web'], function () {
     /**
      * Catch every other request and send to AngularJS to handle
      */
-    Route::get('{catchall}', function () {
-        return view("index");
-    })->where('catchall', '(.*)');
+    Route::get('{catchall}', array("uses" => "MasterController@index"))->where('catchall', '(.*)');
 });

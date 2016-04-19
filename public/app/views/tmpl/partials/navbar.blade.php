@@ -8,12 +8,12 @@
             </div>
             <div class="nti-desktop-search-bar">
                 {!! Form::open(array("url" => "#", "class" => "nti-desktop-search-bar-form")) !!}
-                    <div class="form-group">
-                        <input type="search" name="query" class="nti-navbar-form-input" placeholder="Search">
-                        <button type="submit" class="nti-navbar-form-icon" title="Search">
-                            <nti-icon [value]="'search'" class="nti-nav-icon"></nti-icon>
-                        </button>
-                    </div>
+                <div class="form-group">
+                    <input type="search" name="query" class="nti-navbar-form-input" placeholder="Search">
+                    <button type="submit" class="nti-navbar-form-icon" title="Search">
+                        <nti-icon [value]="'search'" class="nti-nav-icon"></nti-icon>
+                    </button>
+                </div>
                 {!! Form::close() !!}
             </div>
             <div class="nti-nav-links">

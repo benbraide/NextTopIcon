@@ -3,14 +3,13 @@
  */
 
 import {Component, Input} from "angular2/core";
+import {RouterLink} from 'angular2/router';
 
-import {StaticNavbarComponent} from "./navbar/static.component";
+import {IconComponent} from "../components/icon.component";
 
 @Component({
     selector: "nti-navbar",
-    template: `
-            <nti-static-nav></nti-static-nav>
-    `,
-    directives: [StaticNavbarComponent]
+    templateUrl: "/tmpl/partials/navbar",
+    directives: [RouterLink, IconComponent]
 })
 export class NavbarComponent{}

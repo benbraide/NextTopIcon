@@ -9,7 +9,7 @@ import {NavbarComponent} from "../partials/navbar.component";
 
 @Component({
     selector: "nti-home",
-    templateUrl: "tmpl/pages/home",
+    templateUrl: "/tmpl/pages/home",
     styleUrls: [],
     directives: [NavbarComponent]
 })
